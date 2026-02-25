@@ -1,0 +1,41 @@
+// Function Examples
+// Demonstrates defining and calling functions
+
+// Simple function with two parameters
+define add with x, y
+  set result to x plus y.
+  return result.
+end.
+
+set num1 to 5.
+set num2 to 3.
+set sum to call add with num1, num2.
+print sum.
+
+// Function with multiple operations
+define calculate_area with length, width
+  set area to length times width.
+  return area.
+end.
+
+set area to call calculate_area with 10, 5.
+print area.
+
+// Function without parameters
+define say_hello
+  print hello from function.
+end.
+
+call say_hello.
+
+// Function that uses conditionals
+define check_even with number
+  set remainder to number minus number.
+  if number is greater than 0 then
+    return number.
+  end.
+  return number.
+end.
+
+set result to call check_even with 10.
+print result.

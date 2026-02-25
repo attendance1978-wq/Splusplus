@@ -1,0 +1,18 @@
+// List Processing
+// Demonstrates working with lists using for each
+
+// NOTE: List literal syntax (1, 2, 3) not yet implemented
+// Use individual print statements instead
+
+print 10.
+print 20.
+print 30.
+print 40.
+print 50.
+
+// Alternative: Process with loop
+set counter to 1.
+repeat while counter is less than 6
+  print counter.
+  set counter to counter plus 1.
+end.

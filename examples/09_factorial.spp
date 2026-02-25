@@ -1,0 +1,34 @@
+// Factorial Calculator
+// A complete program combining functions, loops, and conditionals
+
+define factorial with n
+  if n is less than 2 then
+    return 1.
+  end.
+  
+  set result to 1.
+  set i to n.
+  
+  repeat while i is greater than 1
+    set result to result times i.
+    set i to i minus 1.
+  end.
+  
+  return result.
+end.
+
+// Test the factorial function
+set test_value to 5.
+set fact to call factorial with test_value.
+
+print factorial of 5 is fact.
+
+// Calculate individual factorials
+set result1 to call factorial with 1.
+print factorial of 1 is result1.
+
+set result2 to call factorial with 2.
+print factorial of 2 is result2.
+
+set result5 to call factorial with 5.
+print factorial of 5 is result5.

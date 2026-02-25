@@ -1,0 +1,15 @@
+// Variables and Data Types
+// Demonstrates setting and using different data types
+
+set name to alice.
+set age to 25.
+set height to 5.6.
+set city to newyork.
+
+print name.
+print age.
+print height.
+print city.
+
+// Simple output with multiple values
+print age.

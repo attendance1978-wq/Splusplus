@@ -1,0 +1,46 @@
+// Interactive Calculator
+// Demonstrates input, conditionals, functions, and loops
+
+define add with x, y
+  return x plus y.
+end.
+
+define subtract with x, y
+  return x minus y.
+end.
+
+define multiply with x, y
+  return x times y.
+end.
+
+define divide with x, y
+  if y equals 0 then
+    print cannot divide by zero.
+    return 0.
+  end.
+  return x divided by y.
+end.
+
+// Main program
+print welcome to calculator.
+
+repeat 3 times
+  ask enter first number and store in first.
+  ask enter second number and store in second.
+  
+  print your numbers are first and second.
+  
+  set addition_result to call add with first, second.
+  print addition is addition_result.
+  
+  set subtraction_result to call subtract with first, second.
+  print subtraction is subtraction_result.
+  
+  set multiplication_result to call multiply with first, second.
+  print multiplication is multiplication_result.
+  
+  set division_result to call divide with first, second.
+  print division is division_result.
+end.
+
+print thank you for using calculator.

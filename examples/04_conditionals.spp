@@ -1,0 +1,32 @@
+// Conditional Statements
+// Demonstrates if and otherwise blocks
+
+set score to 85.
+
+if score is greater than 80 then
+  print great score.
+otherwise
+  print needs improvement.
+end.
+
+// Another example
+set age to 16.
+
+if age is greater than 18 then
+  print you can vote.
+otherwise
+  print you cannot vote yet.
+end.
+
+// Nested conditionals
+set grade to 88.
+
+if grade is greater than 80 then
+  if grade is greater than 90 then
+    print excellent.
+  otherwise
+    print good.
+  end.
+otherwise
+  print needs work.
+end.

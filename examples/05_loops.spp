@@ -1,0 +1,27 @@
+// Loop Examples
+// Demonstrates while loops and count loops
+
+// Example 1: Print numbers 1 to 5 using while loop
+print counting.
+set counter to 1.
+repeat while counter is less than 6
+  print counter.
+  set counter to counter plus 1.
+end.
+
+// Example 2: Print a message 3 times using count loop
+print repeating message.
+repeat 3 times
+  print hello.
+end.
+
+// Example 3: Sum numbers 1 to 10
+set sum to 0.
+set i to 1.
+repeat while i is less than 11
+  set sum to sum plus i.
+  set i to i plus 1.
+end.
+
+print sum of count up to ten is.
+print sum.

@@ -1,0 +1,24 @@
+// Final Demonstration of S++ Language
+
+print Hello from S Language.
+
+set x to 10.
+set y to 20.
+set total to x plus y.
+
+print Total is total.
+
+define square with n
+  return n times n.
+end.
+
+set result to call square with 5.
+print 5 squared is result.
+
+if result is greater than 20 then
+  print Result is large.
+end.
+
+repeat 3 times
+  print Done executing.
+end.

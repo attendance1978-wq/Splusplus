@@ -1,0 +1,56 @@
+// Grade Calculator
+// Calculates average grade and provides feedback
+
+define get_letter_grade with percentage
+  if percentage is greater than 90 then
+    return A.
+  end.
+  
+  if percentage is greater than 80 then
+    return B.
+  end.
+  
+  if percentage is greater than 70 then
+    return C.
+  end.
+  
+  if percentage is greater than 60 then
+    return D.
+  end.
+  
+  return F.
+end.
+
+// Student grades
+set grade1 to 85.
+set grade2 to 90.
+set grade3 to 78.
+set grade4 to 92.
+set grade5 to 88.
+
+// Calculate average
+set sum to grade1 plus grade2 plus grade3 plus grade4 plus grade5.
+set average to sum divided by 5.
+
+print student grades.
+print grade 1 is grade1.
+print grade 2 is grade2.
+print grade 3 is grade3.
+print grade 4 is grade4.
+print grade 5 is grade5.
+
+print your average grade is average.
+
+set letter to call get_letter_grade with average.
+print your letter grade is letter.
+
+// Feedback
+if average is greater than 90 then
+  print excellence achieved.
+otherwise
+  if average is greater than 80 then
+    print good work.
+  otherwise
+    print keep studying.
+  end.
+end.

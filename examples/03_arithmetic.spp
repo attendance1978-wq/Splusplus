@@ -1,0 +1,21 @@
+// Arithmetic Operations
+// Demonstrates math operations using keyword-based syntax
+
+set a to 10.
+set b to 3.
+
+set addition to a plus b.
+set subtraction to a minus b.
+set multiplication to a times b.
+set division to a divided by b.
+
+print addition.
+print subtraction.
+print multiplication.
+print division.
+
+// Using operations directly
+print 5 plus 5.
+print 20 minus 8.
+print 4 times 3.
+print 12 divided by 2.
