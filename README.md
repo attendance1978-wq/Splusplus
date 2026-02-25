@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon/S++.png" width="128" alt="S++ Programming Language Icon">
+  <img src="icon/S++.png" width="400" alt="S++ Programming Language Icon">
 </p>
 
 <h1 align="center">📚 S++ Programming Language</h1>
@@ -212,3 +212,4 @@ Built as a demonstration of language design and interpreter implementation.
 ---
 
 **Happy Coding in S++!** 🚀
+
