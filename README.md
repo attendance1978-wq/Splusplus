@@ -1,7 +1,20 @@
-# 📚 S++ Programming Language
+<p align="center">
+  <img src="icon/S++.png" width="128" alt="S++ Programming Language Icon">
+</p>
 
-✨ An English-like programming language interpreter built in Python. Write code using natural English keywords with minimal symbols.
+<h1 align="center">📚 S++ Programming Language</h1>
 
+<p align="center">
+  ✨ An English-like programming language interpreter built in Python.<br>
+  Write software using simple English sentences, commas, and periods.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-blue">
+  <img src="https://img.shields.io/badge/Type-Interpreter-green">
+  <img src="https://img.shields.io/badge/Syntax-English-orange">
+  <img src="https://img.shields.io/badge/Status-Development-yellow">
+</p>
 ## ✨ Features
 
 🔤 **Simple English Syntax** - No complex symbols, just English keywords  
