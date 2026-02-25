@@ -20,7 +20,7 @@ A fully functional Python interpreter that includes:
 
 **Size**: ~900 lines of well-organized Python code
 
-### 2. 📖 **Language Specification** (`specification.md`)
+### 2. **Language Specification** (`specification.md`)
 A comprehensive document (600+ lines) covering:
 - Complete language syntax and semantics
 - All keywords, operators, and symbols
@@ -29,25 +29,41 @@ A comprehensive document (600+ lines) covering:
 - Type coercion behavior
 - Complete language reference
 
-### 3. 💡 **Example Programs** (`examples/`)
+### 3. **Example Programs** (`examples/`)
 10 working example programs demonstrating all language features:
 
 1. **01_hello_world.spp** - Classic hello world
-2. **02_variables.spp** - 📝 Variable declaration and types
-3. **03_arithmetic.spp** - ➕ Math operations
-4. **04_conditionals.spp** - 🔀 If/otherwise logic
-5. **05_loops.spp** - 🔁 While and repeat loops
-6. **06_functions.spp** - ⚙️ Function definition and calls
-7. **07_lists.spp** - 📋 Loop processing
-8. **08_calculator.spp** - 🧮 Interactive calculator (complex example)
-9. **09_factorial.spp** - 🔢 Recursive factorial calculation
-10. **10_grades.spp** - 📊 Grade calculator with nested conditionals
+2. **02_variables.spp** - Variable declaration and types
+3. **03_arithmetic.spp** - Math operations
+4. **04_conditionals.spp** - If/otherwise logic
+5. **05_loops.spp** - While and repeat loops
+6. **06_functions.spp** - Function definition and calls
+7. **07_lists.spp** - Loop processing
+8. **08_calculator.spp** - Interactive calculator (complex example)
+9. **09_factorial.spp** - Recursive factorial calculation
+10. **10_grades.spp** - Grade calculator with nested conditionals
 
-### 4. 📚 **Documentation** (`README.md`)
+### 4. **Documentation** (`README.md`)
 User-friendly documentation including:
 - Quick start guide
 - Language overview
 - Installation instructions
+
+### 5. **🔒 Security Policy** (`SECURITY.md`)
+Comprehensive security documentation covering:
+- Security model and intended use
+- Limitations and constraints
+- Best practices for developers and users
+- Known security considerations
+- Resource management recommendations
+
+### 6. **📜 License** (`LICENSE.md`)
+MIT License documentation including:
+- Full license text and terms
+- What you can/must/cannot do
+- Compatibility information
+- Contributing guidelines
+- Legal disclaimers
 - Example usage
 - Feature descriptions
 
@@ -186,7 +202,7 @@ The current implementation doesn't include:
 
 These are intentional design choices to keep the language and implementation simple.
 
-## 📚 Files Summary
+## Files Summary
 
 ```
 e:\EPP\
@@ -220,6 +236,14 @@ e:\EPP\
 ✅ English-based syntax throughout
 ✅ Rock-solid parsing with proper error handling
 ✅ Comprehensive documentation and examples
+
+### 7. 📚 **Wiki** (`wiki/`)
+Project wiki with expanded how-tos and reference pages:
+- Home overview and roadmap
+- Getting Started guide and examples
+- Architecture and internals
+- Example walkthroughs and tutorials
+- Contributing guide and FAQ
 
 ## Next Steps (Optional Enhancements)
 
