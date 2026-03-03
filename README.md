@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon/S++.png" width="400" alt="S++ Programming Language Icon">
+  <img src="icon/S++.png" width="128" alt="S++ Programming Language Icon">
 </p>
 
 <h1 align="center">📚 S++ Programming Language</h1>
@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/Type-Interpreter-green">
   <img src="https://img.shields.io/badge/Syntax-English-orange">
   <img src="https://img.shields.io/badge/Status-Development-yellow">
-  <img src="https://www.freewebtools.com/api/badge/Splusplus-EDUCATIONAL%20PURPOSE%20ONLY-4c1.svg?style=rounded&labelColor=1000">
 </p>
 ## ✨ Features
 
@@ -213,5 +212,3 @@ Built as a demonstration of language design and interpreter implementation.
 ---
 
 **Happy Coding in S++!** 🚀
-
-

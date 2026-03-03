@@ -2,6 +2,8 @@
 
 Welcome to the S++ project wiki. This space provides expanded, discoverable documentation and how‑tos for developers and users.
 
+Welcome to the Splusplus wiki!
+
 Pages:
 - [Getting Started](Getting-Started.md) — Run the interpreter and examples
 - [Architecture](Architecture.md) — Design and internals of the interpreter

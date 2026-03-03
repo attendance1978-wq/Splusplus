@@ -1,23 +1,14 @@
-# 📖 S++ Language Specification (Java-style)
+# 📖 S++ Language Specification
 
 ## 🎯 Overview
-S++ (Simplified Programming Plus) is an English-like programming language designed for ease of use and readability. It uses **Java-style classes and functions**, minimal punctuation, and natural English keywords, making it beginner-friendly.
+S++ (Simplified Programming Plus) is an English-like programming language designed for ease of use and readability. It uses minimal symbols (only commas and periods) and natural English keywords, making it accessible to beginners.
 
 ---
 
-## 1. ⌨️ Syntax Structure
-
-### Class and Function
-```
-class ProjectName {
-func main() {
-statements;
-}
-}
-```
-- All code runs inside **classes**  
-- Entry point is `func main()`  
-- Functions are defined with `func`  
+## 1. ⌨️ Symbols
+Only **two symbols** are allowed in S++:
+- **Comma (`,`)**: Separator for lists and function parameters
+- **Period (`.`)**: Terminates all statements
 
 ---
 
@@ -26,215 +17,219 @@ statements;
 ### 📝 Declaration and Assignment
 Variables are created using the `set` keyword:
 
-
-set variable_name = value;
-
+```
+set variable_name to value.
+```
 
 ### 🎨 Data Types
 S++ supports multiple data types:
-- **#️⃣ Numbers**: Integers and floats (`10`, `3.14`)
-- **📝 Strings**: Text in double quotes (`"hello world"`)
-- **✓ Booleans**: `true` / `false`
-- **📋 Lists**: Comma-separated values (`1,2,3`)
+- **#️⃣ Numbers**: Integers and floats (e.g., `10`, `3.14`)
+- **📝 Strings**: Text values (words/sentences)
+- **📋 Lists**: Collections of values separated by commas
+- **✓ Booleans**: Implicit (truthy/falsy values)
 
 ### Examples
 ```
-set age = 25;
-set name = "John";
-set message = "Hello world";
-set numbers = 1,2,3,4,5;
-set total = 0;
+set age to 25.
+set name to john.
+set message to hello world.
+set numbers to 1, 2, 3, 4, 5.
+set total to 0.
+```
 
-```
 ---
-```
+
 ## 3. 📢 Input and Output
 
-### 🖨️ Print
+### 🖨️ Print/Write
 Display values to the console:
 
-
-print x = "Hello World";
-print total = a + b;
-
+```
+print expression.
+write expression.
+```
 
 ### ⌨️ Input (Ask)
 Get user input:
 
-
-ask "Enter your name" and store in username;
-ask "Enter your age" and store in age;
-
+```
+ask what is your name and store in username.
+ask enter your age and store in age.
+```
 
 ### Examples
-
-print greeting = "Hello World";
-set sum = 5 + 3;
-print total = sum;
-ask "What is your favorite color?" and store in color;
-
+```
+print hello world.
+print message.
+ask what is your age and store in user_age.
+ask enter your favorite color and store in color.
+```
 
 ---
 
 ## 4. 🧮 Operators
 
 ### ➕➖ Arithmetic Operators
-- `+` : Addition
-- `-` : Subtraction
-- `*` : Multiplication
-- `/` : Division
+- `plus`: Addition
+- `minus`: Subtraction
+- `times`: Multiplication
+- `divided by`: Division
 
 ### 🔗 Comparison Operators
-- `==` : Equality
-- `!=` : Not equal
-- `>`  : Greater than
-- `<`  : Less than
-- `>=` : Greater or equal
-- `<=` : Less or equal
+- `equals`: Equality check
+- `is greater than`: Greater than (>)
+- `is less than`: Less than (<)
 
 ### 🧠 Logical Operators
-- `and` : Logical AND
-- `or` : Logical OR
-- `not` : Logical NOT
+- `and`: Logical AND
+- `or`: Logical OR
+- `not`: Logical NOT
 
 ### Examples
+```
+set sum to 5 plus 3.             // 8
+set difference to 10 minus 3.    // 7
+set product to 4 times 5.        // 20
+set quotient to 20 divided by 4. // 5
 
-set sum = 5 + 3; // 8
-set difference = 10 - 3; // 7
-set product = 4 * 5; // 20
-set quotient = 20 / 4; // 5
-
-if age > 18 {
-print status = "Adult";
-}
-
+if age is greater than 18 then
+  print you are adult.
+end.
+```
 
 ---
 
-## 5. Conditional Statements (If/Else)
+## 5. Conditional Statements (If/Otherwise)
 
 ### Syntax
-
-if (condition) {
-statements;
-} else {
-statements;
-}
-
+```
+if condition then
+  statements
+otherwise
+  statements
+end.
+```
 
 ### Features
-- `else` block is optional
+- The `otherwise` block is optional
+- Conditions can use comparison and logical operators
 - Nested if statements are supported
 
 ### Examples
+```
+if age is greater than 18 then
+  print you can vote.
+otherwise
+  print you cannot vote yet.
+end.
 
-if (age > 18) {
-print status = "Adult";
-} else {
-print status = "Minor";
-}
-
-if (grade == "A" and score > 90) {
-print result = "Excellent";
-}
-
+if grade equals A and score is greater than 90 then
+  print excellent.
+end.
+```
 
 ---
 
 ## 6. Loops
 
-### While Loop
-
-while (condition) {
-statements;
-}
-
-
-### Count Loop (For)
-
-for set i = 0; i < 5; i = i + 1 {
-statements;
-}
-
-
-### For Each Loop
-
-for each item in list_name {
-statements;
-}
-
-
-### Examples
-
-// While Loop
-set counter = 1;
-while (counter < 10) {
-print c = counter;
-set counter = counter + 1;
-}
-
-// Count Loop
-for set i = 0; i < 5; i = i + 1 {
-print i = i;
-}
-
-// For Each Loop
-set fruits = "apple","banana","orange";
-for each fruit in fruits {
-print f = fruit;
-}
+### While Loop (Repeat While)
+Repeat while a condition is true:
 
 ```
+repeat while condition
+  statements
+end.
+```
+
+### Count Loop (Repeat N Times)
+Repeat a specific number of times:
+
+```
+repeat count times
+  statements
+end.
+```
+
+### For Each Loop
+Iterate through a list:
+
+```
+for each item in list_name
+  statements
+end.
+```
+
+### Examples
+```
+// While Loop
+set counter to 1.
+repeat while counter is less than 10
+  print counter.
+  set counter to counter plus 1.
+end.
+
+// Count Loop
+repeat 5 times
+  print hello.
+end.
+
+// For Each Loop
+set fruits to apple, banana, orange.
+for each fruit in fruits
+  print fruit.
+end.
+```
+
 ---
 
 ## 7. Functions
 
 ### Define a Function
-
-func function_name(param1, param2) {
-statements;
-return expression;
-}
-
+```
+define function_name with parameter1, parameter2
+  statements
+  return value.
+end.
+```
 
 ### Call a Function
-
-set result = call function_name(arg1, arg2);
-
+```
+set result to call function_name with argument1, argument2.
+```
 
 ### Return Statement
 Functions can return values using `return`:
 
-
-return expression;
-
+```
+return expression.
+```
 
 ### Examples
+```
+define add_numbers with x, y
+  set result to x plus y.
+  return result.
+end.
 
-func add_numbers(x, y) {
-set result = x + y;
-return result;
-}
+set sum to call add_numbers with 5, 3.
+print sum.
 
-set sum = call add_numbers(5, 3);
-print total = sum;
+define greet with name
+  print hello, name.
+end.
 
-func greet(name) {
-print msg = "Hello " + name;
-}
-
-call greet("John");
-
+call greet with john.
+```
 
 ---
 
 ## 8. Comments
 Comments start with `//` and continue to the end of the line:
 
-
+```
 // This is a comment
-set age = 25; // This variable stores the age
-
+set age to 25. // This variable stores the age
+```
 
 ---
 
@@ -248,8 +243,8 @@ set age = 25; // This variable stores the age
 
 ## 10. Truthy/Falsy Values
 In conditional contexts, values are evaluated as:
-- **Truthy**: Non-zero numbers, non-empty strings/lists, `true`
-- **Falsy**: Zero, empty string/list, `false`
+- **Truthy**: Non-zero numbers, non-empty strings, non-empty lists, `true`
+- **Falsy**: Zero, empty string, empty list, `false`
 
 ---
 
@@ -263,32 +258,38 @@ In conditional contexts, values are evaluated as:
 ## 12. Complete Language Grammar (BNF)
 
 ```
-program : class_def*
-class_def : CLASS IDENTIFIER LBRACE func_def* RBRACE
-func_def : FUNC IDENTIFIER LPAREN param_list? RPAREN LBRACE statement* RBRACE
-param_list : IDENTIFIER (COMMA IDENTIFIER)*
-statement : set_stmt | print_stmt | if_stmt | while_stmt | for_stmt | func_call | return_stmt
-set_stmt : SET IDENTIFIER EQUAL expression SEMICOLON
-print_stmt : PRINT IDENTIFIER EQUAL expression SEMICOLON
-if_stmt : IF LPAREN expression RPAREN LBRACE statement* RBRACE (ELSE LBRACE statement* RBRACE)?
-while_stmt : WHILE LPAREN expression RPAREN LBRACE statement* RBRACE
-for_stmt : FOR IDENTIFIER EQUAL expression SEMICOLON expression SEMICOLON expression LBRACE statement* RBRACE
-for_each_stmt : FOR EACH IDENTIFIER IN expression LBRACE statement* RBRACE
-func_call : CALL IDENTIFIER LPAREN arg_list? RPAREN SEMICOLON
-return_stmt : RETURN expression SEMICOLON
-expression : addition ((PLUS | MINUS) addition)*
-addition : multiplication ((TIMES | DIVIDE) multiplication)*
-multiplication : unary
-unary : NOT unary | primary
-primary : NUMBER | STRING | BOOLEAN | IDENTIFIER | func_call
-arg_list : expression (COMMA expression)*
+program         : statement*
+statement       : set_stmt | print_stmt | ask_stmt | if_stmt | repeat_stmt | for_stmt | func_def | func_call | return_stmt
+set_stmt        : SET IDENTIFIER TO expression PERIOD
+print_stmt      : (PRINT | WRITE) expression PERIOD
+ask_stmt        : ASK phrase AND_STORE_IN IDENTIFIER PERIOD
+if_stmt         : IF expression THEN statement* (OTHERWISE statement*)? END PERIOD
+repeat_stmt     : REPEAT WHILE expression statement* END PERIOD
+                | REPEAT expression TIMES statement* END PERIOD
+for_stmt        : FOR EACH IDENTIFIER IN expression statement* END PERIOD
+func_def        : DEFINE IDENTIFIER (WITH param_list)? statement* END PERIOD
+func_call       : CALL IDENTIFIER (WITH arg_list)?
+return_stmt     : RETURN expression? PERIOD
+expression      : or_expr
+or_expr         : and_expr (OR and_expr)*
+and_expr        : comparison ((AND | OR) comparison)*
+comparison      : addition ((EQUALS | IS_GREATER_THAN | IS_LESS_THAN) addition)*
+addition        : multiplication ((PLUS | MINUS) multiplication)*
+multiplication  : unary ((TIMES | DIVIDED_BY) unary)*
+unary           : (NOT) unary | primary
+primary         : NUMBER | IDENTIFIER | CALL
+phrase          : (IDENTIFIER | NUMBER)+
+param_list      : IDENTIFIER (COMMA IDENTIFIER)*
+arg_list        : expression (COMMA expression)*
 ```
+
 ---
 
 ## 13. Limitations
+- No built-in data structures beyond lists
 - No file I/O operations
-- Only basic lists supported
-- No modules or imports
+- No object-oriented features
+- No module/import system
 - Limited standard library
 
 ---
@@ -296,69 +297,45 @@ arg_list : expression (COMMA expression)*
 ## 14. Example Programs
 
 ### Hello World
-
-print message = "Hello World";
-
+```
+print hello world.
+```
 
 ### Variables and Math
-
-set x = 10;
-set y = 5;
-set sum = x + y;
-print total = sum;
-
+```
+set x to 10.
+set y to 5.
+set sum to x plus y.
+print sum.
+```
 
 ### Conditional Logic
-
-set age = 20;
-if (age > 18) {
-print status = "Adult";
-} else {
-print status = "Minor";
-}
-
+```
+set age to 20.
+if age is greater than 18 then
+  print you are an adult.
+otherwise
+  print you are a minor.
+end.
+```
 
 ### Loops
-
-set i = 1;
-while (i < 6) {
-print n = i;
-set i = i + 1;
-}
-
+```
+set i to 1.
+repeat while i is less than 6
+  print i.
+  set i to i plus 1.
+end.
+```
 
 ### Functions
+```
+define multiply with a, b
+  return a times b.
+end.
 
-func multiply(a, b) {
-return a * b;
-}
-set result = call multiply(3, 4);
-print product = result;
+set result to call multiply with 3, 4.
+print result.
+```
 
-
-### Full Class Example
-
-class ProjectExample {
-func main() {
-print greeting = "Hello World";
-set a = 10;
-set b = 5;
-print sum = a + b;
-print difference = a - b;
-print product = a * b;
-print quotient = a / b;
-
-    if (a > b) {
-        print bigger = "a is bigger";
-    } else {
-        print bigger = "b is bigger";
-    }
-
-    set i = 0;
-    while (i < 3) {
-        print count = i;
-        set i = i + 1;
-    }
-}
-
-}
+For more examples, see the `examples/` directory.
