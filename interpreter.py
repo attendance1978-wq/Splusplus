@@ -391,7 +391,9 @@ class Parser:
         elif self.current_token.type == TokenType.DEFINE:
             return self.parse_function_def()
         elif self.current_token.type == TokenType.CALL:
-            return self.parse_function_call()
+            call = self.parse_function_call()
+            self.eat(TokenType.PERIOD)
+            return call
         elif self.current_token.type == TokenType.RETURN:
             return self.parse_return_statement()
         else:
@@ -463,6 +465,9 @@ class Parser:
                     return PrintStatement(left)
                 else:
                     raise Exception("No left operand for expression")
+            elif self.current_token.type == TokenType.COMMA:
+                # Commas in print statements are natural separators, not output text.
+                self.eat(TokenType.COMMA)
             elif self.current_token.type in [TokenType.IDENTIFIER, TokenType.NUMBER]:
                 words.append(str(self.current_token.value))
                 self.eat(self.current_token.type)
@@ -741,6 +746,18 @@ class Interpreter:
     
     def visit_PrintStatement(self, node: PrintStatement) -> Any:
         value = self.visit(node.expression)
+
+        # For phrase-style print statements, interpolate identifiers that
+        # reference defined variables (e.g. "print hello, name.").
+        if isinstance(value, str):
+            parts = []
+            for token in value.split():
+                if token in self.variables:
+                    parts.append(str(self.variables[token]))
+                else:
+                    parts.append(token)
+            value = ' '.join(parts)
+
         print(self.format_output(value))
         return value
     
